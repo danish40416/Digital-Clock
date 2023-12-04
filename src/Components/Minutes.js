@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-export default function Minutes ({ updateMinutes })  {
+export default function Minutes({ updateMinutes }) {
   const [minutes, setMinutes] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const newMinutes = (minutes + 1) % 60;
-      setMinutes(newMinutes);
-      updateMinutes(newMinutes);
+      setMinutes((prevMinutes) => {
+        const newMinutes = (prevMinutes + 1) % 60;
+        updateMinutes(newMinutes);
+        return newMinutes;
+      });
     }, 60000);
 
     return () => clearInterval(interval);
-  }, [minutes, updateMinutes]);
+  }, [updateMinutes]);
 
-  return (
-    <div>
-    </div>
-  );
-};
-
-
+  return <div></div>;
+}
