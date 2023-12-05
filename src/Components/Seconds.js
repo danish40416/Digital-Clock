@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Seconds({ updateSeconds }) {
+export default function Seconds(restSeconds) {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
+    let currentSeconds = 0;
+
     const interval = setInterval(() => {
-      setSeconds(prevSeconds => {
-        const newSeconds = (prevSeconds + 1) % 60;
-        updateSeconds(newSeconds);
-        return newSeconds;
+      setSeconds((prevSeconds) => {
+        currentSeconds = (prevSeconds + 1) >= 60 ? 0 : prevSeconds + 1;
+        restSeconds(currentSeconds)
+        return currentSeconds;
       });
     }, 1000);
-
     return () => clearInterval(interval);
-  }, [updateSeconds]);
-
-  return <div></div>;
+  }, []); 
+  return <div>{seconds} seconds</div>;
 }
