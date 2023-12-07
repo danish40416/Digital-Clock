@@ -3,11 +3,10 @@ import React, { useEffect } from 'react';
 export default function Hours({ time, setTime }) {
   useEffect(() => {
     setTime((prevTime) => {
-      const seconds = prevTime.seconds;
-      const minutes = prevTime.minutes;
-      const hours = minutes >= 60 && seconds >= 60 ? prevTime.hours + 1 : prevTime.hours;
+     
+      const hours = prevTime.minutes >= 60 && prevTime.seconds >= 60 ? prevTime.hours + 1 : prevTime.hours;
 
-      return { seconds,minutes, hours };
+      return { ...prevTime, hours };
     });
   }, [ setTime]);
 
