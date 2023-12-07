@@ -4,7 +4,6 @@ import Minutes from './Minutes';a
 import Seconds from './Seconds';
 
 export default function DigitalWatch({ time, setTime }) {
-
   return (
   <div className="app">
     <div className="container">
