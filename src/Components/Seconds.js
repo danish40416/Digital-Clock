@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-export default function Seconds() {
-  const [seconds, setSeconds] = useState(0);
-
+export default function Seconds({ time, setTime }) {
   useEffect(() => {
-    let currentSeconds = 0;
-
     const interval = setInterval(() => {
-      setSeconds((prevSeconds) => {
-        currentSeconds = (prevSeconds + 1) >= 60 ? 0 : prevSeconds + 1;
-        return currentSeconds;
+      setTime((prevTime) => {
+        const seconds = prevTime.seconds + 1 >= 60 ? 0 : prevTime.seconds + 1;
+        const minutes = seconds === 0 ? prevTime.minutes + 1 : prevTime.minutes;
+        const hours = minutes === 60 ? prevTime.hours + 1 : prevTime.hours;
+
+        return { seconds, minutes, hours };
       });
     }, 1000);
+
     return () => clearInterval(interval);
-  }, []); 
-  return <div>{seconds} seconds</div>;
+  }, [setTime]);
+
+  return <div>{time.seconds} seconds</div>;
 }

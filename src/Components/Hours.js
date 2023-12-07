@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-export default function Minutes() {
-  const [hours, setHours] = useState(0);
-
+export default function Hours({ time, setTime }) {
   useEffect(() => {
-    let currentHours = 0;
+    setTime((prevTime) => {
+      const seconds = prevTime.seconds;
+      const minutes = prevTime.minutes;
+      const hours = minutes >= 60 && seconds >= 60 ? prevTime.hours + 1 : prevTime.hours;
 
-    const interval = setInterval(() => {
-      setHours((prevHours) => {
-        currentHours = (prevHours + 1) >= 24 ? 0 : prevHours + 1;
-        
-        return currentHours;
-      });
-    }, 3600000);
-    return () => clearInterval(interval);
-  }, []); 
-  return <div>{hours} Hours</div>;
+      return { seconds,minutes, hours };
+    });
+  }, [ setTime]);
+
+  return <div>{time.hours} hours</div>;
 }
