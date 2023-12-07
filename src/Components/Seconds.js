@@ -14,6 +14,7 @@ export default function Seconds({ time, setTime }) {
 
     return () => clearInterval(interval);
   }, [setTime]);
+  const newSeconds= time.seconds<10 ? `0${time.seconds}`: time.seconds;
 
-  return <div>{time.seconds} seconds</div>;
+  return <div>{newSeconds}</div>;
 }
