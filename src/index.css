@@ -18,7 +18,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh; 
+  height: 40vh;
 }
 
 .container {
@@ -37,11 +37,11 @@ code {
 }
 
 .reset-button {
-  margin-top: 20px; 
-  
+  margin-top: 20px;
+
 }
 .colon{
- 
+
   height: 150px;
   display: flex;
   align-items: center;
