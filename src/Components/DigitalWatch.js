@@ -5,6 +5,7 @@ import Seconds from './Seconds';
 import Modal from './Modal'
 
 export default function DigitalWatch({ time, setTime }) {
+
   return (
   <div className="app">
     <div className="container">
