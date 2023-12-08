@@ -1,7 +1,8 @@
 import React  from 'react';
 import Hours from './Hours';
-import Minutes from './Minutes';a
+import Minutes from './Minutes';
 import Seconds from './Seconds';
+import Modal from './Modal'
 
 export default function DigitalWatch({ time, setTime }) {
   return (
@@ -19,6 +20,7 @@ export default function DigitalWatch({ time, setTime }) {
       <div className="box bg-info">
         <Seconds time={time} setTime={setTime} />
       </div>
+      <Modal/>
     </div>
   </div>
   );
