@@ -5,22 +5,23 @@ import Seconds from './Seconds';
 import Modal from './Modal'
 
 export default function DigitalWatch({ time, setTime }) {
+
   return (
   <div className="app">
     <div className="container">
       <div className="box bg-primary">
-        <Hours time={time} setTime={setTime} />
+        <Hours time={time} />
       </div>
       <div className='colon' >:</div>
 
       <div className="box bg-primary">
-        <Minutes time={time} setTime={setTime} />
+        <Minutes time={time} />
       </div>
       <div className='colon' >:</div>
       <div className="box bg-info">
         <Seconds time={time} setTime={setTime} />
       </div>
-      <Modal/>
+      {/*<Modal />*/}
     </div>
   </div>
   );
