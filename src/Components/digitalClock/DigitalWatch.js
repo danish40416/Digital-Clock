@@ -1,28 +1,46 @@
-import React  from 'react';
+import React, { useState } from 'react';
 import Hours from './Hours';
 import Minutes from './Minutes';
 import Seconds from './Seconds';
-import Modal from './Modal'
+import Modal from './Modal';
 
 export default function DigitalWatch({ time, setTime }) {
+  const [ModalOpen, setModalOpen] = useState(false);
 
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const saveChanges = (newTime) => {
+    setTime(newTime);
+  };
+
+ 
   return (
-  <div className="app">
-    <div className="container">
-      <div className="box bg-primary">
-        <Hours time={time} />
+    <div className="app">
+      <div className="digital-watch">
+        <div id="hours">
+          <Hours time={time} />
+        </div>
+        <div id="colon">:</div>
+        <div id="minutes">
+          <Minutes time={time} />
+        </div>
+        <div id="seconds">
+          <Seconds time={time} setTime={setTime} />
+        </div>
       </div>
-      <div className='colon' >:</div>
+      <button className="open-modal-btn" onClick={openModal}>
+        Set Time
+      </button>
 
-      <div className="box bg-primary">
-        <Minutes time={time} />
-      </div>
-      <div className='colon' >:</div>
-      <div className="box bg-info">
-        <Seconds time={time} setTime={setTime} />
-      </div>
-      {/*<Modal />*/}
+      <Modal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
     </div>
-  </div>
+    
+  
   );
 }

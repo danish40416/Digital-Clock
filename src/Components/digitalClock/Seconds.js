@@ -9,7 +9,7 @@ export default function Seconds({ time, setTime }) {
         const hours = minutes === 60 ? prevTime.hours + 1 : prevTime.hours;
 
         return { seconds, minutes, hours };
-      });
+      }); 
     }, 1000);
 
     return () => clearInterval(interval);
