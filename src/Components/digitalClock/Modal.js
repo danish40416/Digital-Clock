@@ -24,8 +24,8 @@ export default function Modal({ isOpen, onClose, onSave }) {
         <input type="number"  value={modalTime.seconds}
           onChange={(e) => setModalTime({ ...modalTime, seconds: parseInt(e.target.value.slice(0,2))  })} />
 
-        <button onClick={handleSave}>Save Changes</button>
-        <button className="close" onClick={onClose}> Close Modal </button>
+        <button  onClick={handleSave}>Save Changes</button>
+        <button className=" close" onClick={onClose}> Close Modal </button>
       </div>
     </div>
   );
