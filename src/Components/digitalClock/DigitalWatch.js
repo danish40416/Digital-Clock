@@ -1,35 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hours from './Hours';
 import Minutes from './Minutes';
 import Seconds from './Seconds';
 import Modal from './Modal';
 
 export default function DigitalWatch() {
-
-  ///Reset Time////
   const [time, setTime] = useState({ seconds: 0, minutes: 0, hours: 0 });
+  const [modalOpen, setmodalOpen] = useState(false);
 
   const resetTime = () => {
     setTime({ seconds: 0, minutes: 0, hours: 0 });
   };
-  
-////Modal///
-
-  const [ModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
-    setModalOpen(true);
+    setmodalOpen(true);
   };
 
   const closeModal = () => {
-    setModalOpen(false);
+    setmodalOpen(false);
   };
 
   const saveChanges = (newTime) => {
     setTime(newTime);
   };
-
-////Real Time////
 
   const updateRealTime = () => {
     const currentTime = new Date();
@@ -40,28 +33,35 @@ export default function DigitalWatch() {
     setTime({ hours, minutes, seconds });
   };
 
+  useEffect(() => {
+  
+    updateRealTime();
+    const intervalId = setInterval(updateRealTime, 1000); 
+    return () => clearInterval(intervalId);
+  }, []); 
+
   return (
     <>
-    <div className="app">
-      <div className="digital-watch">
-        <div id="hours">
-          <Hours time={time} />
-        </div>
-        <div id="colon">:</div>
-        <div id="minutes">
-          <Minutes time={time} />
-        </div>
-        <div id="seconds">
-          <Seconds time={time} setTime={setTime} />
+      <div className="app">
+        <div className="digital-watch">
+          <div id="hours">
+            <Hours time={time} />
+          </div>
+          <div id="colon">:</div>
+          <div id="minutes">
+            <Minutes time={time} />
+          </div>
+          <div id="seconds">
+            <Seconds time={time} setTime={setTime} />
+          </div>
         </div>
       </div>
-      </div>
-      <Modal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
+      <Modal isOpen={modalOpen} onClose={closeModal} onSave={saveChanges} />
       <div className='buttons'>
-      <button className="open-modal-btn" onClick={openModal}> Set Time</button>
-      <button className="reset-btn " onClick={resetTime}> Reset </button>
-      <button className="update-real-time-btn" onClick={updateRealTime}>Update Real Time </button>
+        <button className="open-modal-btn" onClick={openModal}> Set Time</button>
+        <button className="reset-btn " onClick={resetTime}> Reset </button>
+        <button className="update-real-time-btn" onClick={updateRealTime}>Update Real Time </button>
       </div>
-      </>
+    </>
   );
 }
