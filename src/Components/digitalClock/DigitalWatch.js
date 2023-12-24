@@ -19,7 +19,7 @@ export default function DigitalWatch() {
 
   const openModal = () => {
     setModalOpen(true);
-  }; 
+  };
 
   const closeModal = () => {
     setModalOpen(false);
@@ -41,9 +41,7 @@ export default function DigitalWatch() {
   };
 
   useEffect(() => {
-    updateRealTime();
-    const intervalId= setInterval(updateRealTime,1000)
-    return  clearInterval(intervalId)
+    updateRealTime(); 
   },[])
 
   return (

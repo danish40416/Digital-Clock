@@ -9,7 +9,6 @@ export default function Modal({ isOpen, onClose, onSave }) {
     onClose();
   };
 
-
   return (
     <div className={`modal ${isOpen ? 'open' : ''}`}>
       <div className="modal-content">
