@@ -1,0 +1,31 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .heading {
+    font-size: 2.5em;
+    font-weight: bolder;
+    font-style: underline;
+    margin-bottom: 100px;
+    text-decoration: underline;
+
+  }
+  
+  .house {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: underline;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 500;
+   
+  }
+  
