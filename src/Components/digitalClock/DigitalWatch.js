@@ -3,6 +3,7 @@ import Hours from './Hours';
 import Minutes from './Minutes';
 import Seconds from './Seconds';
 import Modal from './TimeSetModal';
+import classes from './DigitalWatch.module.css'
 
 export default function DigitalWatch() {
 
@@ -46,25 +47,25 @@ export default function DigitalWatch() {
 
   return (
     <>
-    <div className="app">
-      <div className="digital-watch">
-        <div id="hours">
+    <div className={classes.app}>
+      <div className={classes.digitalWatch}>
+        <div id={classes.hours}>
           <Hours time={time} />
         </div>
-        <div id="colon">:</div>
-        <div id="minutes">
+        <div id={classes.colon}>:</div>
+        <div id={classes.minutes}>
           <Minutes time={time} />
         </div>
-        <div id="seconds">
+        <div id={classes.seconds}>
           <Seconds time={time} setTime={setTime} />
         </div>
       </div>
       </div>
       <Modal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
-      <div className='buttons'>
-      <button className="open-modal-btn" onClick={openModal}> Set Time</button>
-      <button className="reset-btn " onClick={resetTime}> Reset </button>
-      <button className="update-real-time-btn" onClick={updateRealTime}>Update Real Time </button>
+      <div className={classes.buttons}>
+      <button className={classes.openModalBtn} onClick={openModal}> Set Time</button>
+      <button className={classes.resetBtn} onClick={resetTime}> Reset </button>
+      <button className={classes.updateRealTimeBtn} onClick={updateRealTime}>Update Real Time </button>
       </div>
       </>
   );

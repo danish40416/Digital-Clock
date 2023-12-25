@@ -1,46 +1,4 @@
 
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
-  border: 19px solid slategray;
-  background-color: #EBF5FB ;
-  width: 40%;
-  margin:2% 30%;
-}
-
-.digital-watch {
-  display: flex;
-  font-size: 2.5em;
-}
-
-#hours,
-#minutes,
-#colon,
-#seconds {
-  font-size: 4em;
-  font-weight: bold;
-}
-
-#seconds {
-  margin-top: 22%;
-  margin-left: 2%;
-  font-size: 4rem;
-  font-weight: bold;
-}
-
-.reset-btn {
-  background-color: #dc3545;
-  border: 1px solid #dc3545;
- 
-}
-
-.open-modal-btn {
-  background-color: #007bff;
-  border: 1px solid #007bff;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -95,15 +53,4 @@ button {
   background-color: #dc3545;
   border: 1px solid #dc3545;
 }
-
-.update-real-time-btn {
-  background-color: #28a745; 
-  border: 1px solid #28a745;
-}
-.buttons{
-  display: flex;
-  justify-content: center;
-  margin: 2%;
-}
-
 
