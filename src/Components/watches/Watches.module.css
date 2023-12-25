@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
   }
   
   .heading {
@@ -22,7 +23,6 @@
   .link {
     padding: 10px 20px;
     font-size: 1.2em;
-    border: none;
     cursor: pointer;
     border-radius: 10px;
     text-decoration: underline;

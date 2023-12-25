@@ -8,8 +8,8 @@ export default function Watches() {
       <h1 className={classes.heading}>Select The Clock</h1>
     
         <div className={classes.watches}>
-        <Link className={classes.link} to="digital-watch" >   DigitalWatch </Link>
-        <Link className={classes.link} to="analog-watch" > AnalogWatch </Link>
+        <Link className={classes.link} to="digital-watch" > DigitalClock </Link>
+        <Link className={classes.link} to="analog-watch" > AnalogClock </Link>
         </div>
       </div>
     
