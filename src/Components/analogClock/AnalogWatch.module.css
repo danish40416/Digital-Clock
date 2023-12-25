@@ -72,10 +72,58 @@ body {
     font-size: 25px;
     font-weight: bolder;
   }
-  .hour{
+  .hoursWrapper{
+    width: 100px;
+    height: 100px;
     position: absolute;
-    background-color: red;
-    height: 3px;
-    width: 10px;
+    border-radius: 50%;
   }
-  
+  .hoursHand{
+    position: relative;
+  }
+   .hoursHand .hand{
+    width: 3px;
+    height: 55px;
+    background-color: blue;
+    position: absolute;
+    left: 35px;
+    top: 54px;
+    transform: rotate(30deg);
+  }
+   
+  .minutesWrapper{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .minutesHand{
+    position: relative;
+  }
+  .minutesHand .hand{
+    width: 3px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    left: 99px;
+    top: 36px;
+  }
+
+  .secondsWrapper{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .secondsHand{
+    position: relative;
+  }
+   .secondsHand .hand{
+    width: 2px;
+    height: 79px;
+    background-color: black;
+    position: absolute;
+    left: 89px;
+    top: 19px;
+    transform: rotate(270deg);
+  }
