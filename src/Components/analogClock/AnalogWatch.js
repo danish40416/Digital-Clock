@@ -4,6 +4,7 @@ import Minutes from './Minutes';
 import Seconds from './Seconds';
 import TimeSetModal from '../digitalClock/TimeSetModal';
 import Classes from './AnalogWatch.module.css'
+import Buttons from '../reusable/Buttons';
 
 export default function AnalogWatch ()  {
   const [time, setTime] = useState({seconds:0, minutes:0, hours:0});
@@ -55,11 +56,7 @@ export default function AnalogWatch ()  {
           </div>
         </div>
         <TimeSetModal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
-        <div className={Classes.buttons}>
-          <button className={Classes.openModalBtn} onClick={openModal}>Set Time</button>
-          <button className={Classes.resetBtn} onClick={resetTime}>Reset</button>
-          <button className={Classes.updateRealTimeBtn} onClick={updateRealTime}>Update Real Time</button>
-        </div>
+        <Buttons openModal={openModal} resetTime={resetTime} updateRealTime={updateRealTime} />
       </>
   );
 };

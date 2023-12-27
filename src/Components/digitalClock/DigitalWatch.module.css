@@ -31,28 +31,6 @@
     font-weight: bold;
   }
   
-  .resetBtn {
-    background-color: #dc3545;
-    border: 1px solid #dc3545;
-   
-  }
-  
-  .openModalBtn {
-    background-color: #007bff;
-    border: 1px solid #007bff;
-   
-  }
-  .updateRealTimeBtn {
-    background-color: #28a745; 
-    border: 1px solid #28a745;
-  }
-  .buttons{
-    display: flex;
-    justify-content: center;
-    margin: 2%;
-  }
- 
-  
   
   @media only screen and (max-width: 600px) {
     .app {

@@ -4,6 +4,7 @@ import Minutes from './Minutes';
 import Seconds from './Seconds';
 import Modal from './TimeSetModal';
 import classes from './DigitalWatch.module.css'
+import Buttons from '../reusable/Buttons';
 
 export default function DigitalWatch() {
 
@@ -62,11 +63,7 @@ export default function DigitalWatch() {
       </div>
       </div>
       <Modal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
-      <div className={classes.buttons}>
-      <button className={classes.openModalBtn} onClick={openModal}> Set Time</button>
-      <button className={classes.resetBtn} onClick={resetTime}> Reset </button>
-      <button className={classes.updateRealTimeBtn} onClick={updateRealTime}>Update Real Time </button>
-      </div>
+      <Buttons openModal={openModal} resetTime={resetTime} updateRealTime={updateRealTime} />
       </>
   );
 }
