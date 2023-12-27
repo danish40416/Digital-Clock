@@ -16,6 +16,7 @@ export default function Seconds({ time, setTime }) {
 
   }, []);
 
+
   const newSeconds= time.seconds<10 ? `0${time.seconds}`: time.seconds;
 
   return <div>{newSeconds}</div>;

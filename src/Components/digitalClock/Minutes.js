@@ -5,4 +5,3 @@ export default function Minutes({ time }) {
 
   return <div>{newMinutes}</div>;
 }
-

@@ -23,3 +23,4 @@ export default function Seconds({ time, setTime }) {
 
   return <div className={classes.secondHand} style={handStyle}></div>;
 };
+ 

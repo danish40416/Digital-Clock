@@ -14,5 +14,3 @@ export default function Minutes ({ time })  {
 
   return <div className={classes.minuteHand} style={handStyle}></div>;
 };
-
-

@@ -5,4 +5,3 @@ export default function Hours({ time }) {
 
     return <div>{newHours}</div>;
 }
-
