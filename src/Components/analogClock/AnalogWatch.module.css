@@ -1,20 +1,13 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-}
+
 .analog{
   position: relative;
   width: 265px;
   height: 265px;
   border: 10px solid #195832;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 40%;
+  margin-top: 10%;
 }
 
 .clock {
