@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 
 const Buttons = ({ openModal, resetTime, updateRealTime }) => {
   return (
