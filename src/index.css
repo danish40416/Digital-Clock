@@ -1,56 +1,133 @@
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+button{
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 10px;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 40%;
-}
-
-.modal.open {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: 1px solid #007bff;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.close {
-  background-color: #dc3545;
-  border: 1px solid #dc3545;
-}
-
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  .analog{
+    position: relative;
+    width: 265px;
+    height: 265px;
+    border: 10px solid #195832;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock {
+    width: 230px;
+    height: 230px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hour-hand,
+  .minute-hand,
+  .second-hand {
+    position: absolute;
+    background-color: #000;
+    transform-origin: 50% 100%;
+  }
+  
+  .hour-hand {
+    height: 50px;
+    width: 4px;
+    top: 64px;
+    left: 111px;
+  }
+  
+  .minute-hand {
+    height: 70px;
+    width: 3px;
+    top: 43px;
+    left: 112px;
+  }
+  
+  .second-hand {
+    height: 80px;
+    width: 1px;
+    top: 33px;
+    left: 113px;
+  }
+  
+  .analog::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .twelve{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .six{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .nine{
+    font-size: 2rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+  .three{
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bolder;
+    top: 40%;
+    left: 90%;
+  }
+  
+  .resetBtn {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+   
+  }
+  
+  .openModalBtn {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+   
+  }
+  .updateRealTimeBtn {
+    background-color: #28a745; 
+    border: 1px solid #28a745;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+  }

@@ -7,16 +7,7 @@ body {
     background-color: #f0f0f0;
   }
 
-  .analog{
-    position: relative;
-    width: 265px;
-    height: 265px;
-    border: 10px solid #333;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
 
   .clock {
     width: 230px;
@@ -27,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -86,8 +77,8 @@ body {
     height: 55px;
     background-color: blue;
     position: absolute;
-    left: 35px;
-    top: 54px;
+    left: 86px;
+    top: 36px;
     transform: rotate(30deg);
   }
    
@@ -126,4 +117,25 @@ body {
     left: 89px;
     top: 19px;
     transform: rotate(270deg);
+  }
+
+  .resetBtn {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+   
+  }
+  
+  .openModalBtn {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+   
+  }
+  .updateRealTimeBtn {
+    background-color: #28a745; 
+    border: 1px solid #28a745;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
   }

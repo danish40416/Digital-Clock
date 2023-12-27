@@ -1,35 +1,66 @@
-import React from 'react'
-import classes from './AnalogWatch.module.css';
+import React, { useState, useEffect } from 'react';
+import Hours from './Hours';
+import Minutes from './Minutes';
+import Seconds from './Seconds';
+import TimeSetModal from '../digitalClock/TimeSetModal';
 
-export default function AnalogWatch() {
+export default function AnalogWatch ()  {
+  const [time, setTime] = useState({seconds:0, minutes:0, hours:0});
+  const resetTime = () => {
+    setTime({ seconds: 0, minutes: 0, hours: 0 });
+  };
+
+  ////Modal///
+
+  const [ModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const saveChanges = (newTime) => {
+    setTime(newTime);
+  };
+
+  ////Real Time////
+
+  const updateRealTime = () => {
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds()%12;
+
+    setTime({ hours, minutes, seconds });
+  };
+
+  useEffect(() => {
+    updateRealTime();
+  },[])
   return (
-   <div className={classes.analog}>
-    <div className={classes.clock}>
-
-      <div className={classes.num} id={classes.three}>3</div>
-      <div className={classes.num} id={classes.six}>6</div>
-      <div className={classes.num} id={classes.nine}>9</div>
-      <div className={classes.num} id={classes.twelve}>12</div>
-      <div className={classes.origin} >.</div>
-
-      <div className={classes.hoursWrapper}>
-        <div className={classes.hoursHand}>
-          <div className={classes.hand}></div>
+      <>
+        <div className='analog'>
+          <div className="clock">
+            <div className='three'>3</div>
+            <div className='six'>6</div>
+            <div className='nine'>9</div>
+            <div className='twelve'>12</div>
+            <Hours time={time} />
+            <Minutes time={time} />
+            <Seconds time={time} setTime={setTime} />
+          </div>
         </div>
-      </div>
-
-      <div class={classes.minutesWrapper}>
-        <div class={classes.minutesHand}>
-          <div class={classes.hand}></div>
+        <TimeSetModal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
+        <div className='buttons'>
+          <button className='openModalBtn'onClick={openModal}>Set Time</button>
+          <button className='resetBtn'onClick={resetTime}>Reset</button>
+          <button className='updateRealTimeBtn'onClick={updateRealTime}>Update Real Time</button>
         </div>
-      </div>
+      </>
+  );
+};
 
-      <div class={classes.secondsWrapper}>
-        <div class={classes.secondsHand}>
-          <div class={classes.hand}></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  )
-}
+
