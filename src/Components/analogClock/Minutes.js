@@ -1,4 +1,5 @@
 import React  from 'react';
+import classes from './AnalogWatch.module.css'
 
 export default function Minutes ({ time })  {
 
@@ -11,7 +12,7 @@ export default function Minutes ({ time })  {
     transform: `rotate(${minuteDegrees}deg)`,
   };
 
-  return <div className="minute-hand" style={handStyle}></div>;
+  return <div className={classes.minuteHand} style={handStyle}></div>;
 };
 
 

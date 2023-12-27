@@ -3,6 +3,7 @@ import Hours from './Hours';
 import Minutes from './Minutes';
 import Seconds from './Seconds';
 import TimeSetModal from '../digitalClock/TimeSetModal';
+import Classes from './AnalogWatch.module.css'
 
 export default function AnalogWatch ()  {
   const [time, setTime] = useState({seconds:0, minutes:0, hours:0});
@@ -42,22 +43,22 @@ export default function AnalogWatch ()  {
   },[])
   return (
       <>
-        <div className='analog'>
-          <div className="clock">
-            <div className='three'>3</div>
-            <div className='six'>6</div>
-            <div className='nine'>9</div>
-            <div className='twelve'>12</div>
+        <div className={Classes.analog}>
+          <div className={Classes.clock}>
+            <div className={Classes.three}>3</div>
+            <div className={Classes.six}>6</div>
+            <div className={Classes.nine}>9</div>
+            <div className={Classes.twelve}>12</div>
             <Hours time={time} />
             <Minutes time={time} />
             <Seconds time={time} setTime={setTime} />
           </div>
         </div>
         <TimeSetModal isOpen={ModalOpen} onClose={closeModal} onSave={saveChanges} />
-        <div className='buttons'>
-          <button className='openModalBtn'onClick={openModal}>Set Time</button>
-          <button className='resetBtn'onClick={resetTime}>Reset</button>
-          <button className='updateRealTimeBtn'onClick={updateRealTime}>Update Real Time</button>
+        <div className={Classes.buttons}>
+          <button className={Classes.openModalBtn} onClick={openModal}>Set Time</button>
+          <button className={Classes.resetBtn} onClick={resetTime}>Reset</button>
+          <button className={Classes.updateRealTimeBtn} onClick={updateRealTime}>Update Real Time</button>
         </div>
       </>
   );

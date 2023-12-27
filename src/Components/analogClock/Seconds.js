@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import classes from './AnalogWatch.module.css'
 
 export default function Seconds({ time, setTime }) {
   useEffect(() => {
@@ -20,5 +21,5 @@ export default function Seconds({ time, setTime }) {
     transform: `rotate(${secondDegrees}deg)`,
   };
 
-  return <div className="second-hand" style={handStyle}></div>;
+  return <div className={classes.secondHand} style={handStyle}></div>;
 };

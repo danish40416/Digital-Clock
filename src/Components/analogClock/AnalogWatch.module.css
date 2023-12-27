@@ -1,141 +1,124 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+.analog{
+  position: relative;
+  width: 265px;
+  height: 265px;
+  border: 10px solid #195832;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  
+.clock {
+  width: 230px;
+  height: 230px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hourHand,
+.minuteHand,
+.secondHand {
+  position: absolute;
+  background-color: #000;
+  transform-origin: 50% 100%;
+}
 
-  .clock {
-    width: 230px;
-    height: 230px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    padding: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.hourHand {
+  height: 50px;
+  width: 4px;
+  top: 64px;
+  left: 111px;
+}
 
-  #three {
-    justify-content: right;
-    align-items: center;
-  }
+.minuteHand {
+  height: 70px;
+  width: 3px;
+  top: 43px;
+  left: 112px;
+}
 
-  #six {
-    justify-content: center;
-    align-items: flex-end;
-  }
+.secondHand {
+  height: 80px;
+  width: 1px;
+  top: 33px;
+  left: 113px;
+}
 
-  #nine {
-    justify-content: left;
-    align-items: center;
-  }
+.analog::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.twelve{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.six{
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.nine{
+  font-size: 2rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+.three{
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bolder;
+  top: 40%;
+  left: 90%;
+}
 
-  #twelve {
-    justify-content: center;
-    align-items: flex-start;
-  }
+.resetBtn {
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+ 
+}
 
-  .num {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    font-size: 25px;
-    font-weight: bolder;
-  }
-
-  .origin {
-    position: relative;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    font-weight: bolder;
-  }
-  .hoursWrapper{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    border-radius: 50%;
-  }
-  .hoursHand{
-    position: relative;
-  }
-   .hoursHand .hand{
-    width: 3px;
-    height: 55px;
-    background-color: blue;
-    position: absolute;
-    left: 86px;
-    top: 36px;
-    transform: rotate(30deg);
-  }
-   
-  .minutesWrapper{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    border-radius: 50%;
-  }
-  .minutesHand{
-    position: relative;
-  }
-  .minutesHand .hand{
-    width: 3px;
-    height: 70px;
-    background-color: red;
-    position: absolute;
-    left: 99px;
-    top: 36px;
-  }
-
-  .secondsWrapper{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    border-radius: 50%;
-  }
-  .secondsHand{
-    position: relative;
-  }
-   .secondsHand .hand{
-    width: 2px;
-    height: 79px;
-    background-color: black;
-    position: absolute;
-    left: 89px;
-    top: 19px;
-    transform: rotate(270deg);
-  }
-
-  .resetBtn {
-    background-color: #dc3545;
-    border: 1px solid #dc3545;
-   
-  }
-  
-  .openModalBtn {
-    background-color: #007bff;
-    border: 1px solid #007bff;
-   
-  }
-  .updateRealTimeBtn {
-    background-color: #28a745; 
-    border: 1px solid #28a745;
-  }
-  .buttons{
-    display: flex;
-    justify-content: center;
-    margin: 2%;
-  }
+.openModalBtn {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+ 
+}
+.updateRealTimeBtn {
+  background-color: #28a745; 
+  border: 1px solid #28a745;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
