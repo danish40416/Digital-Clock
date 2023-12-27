@@ -6,6 +6,7 @@ import TimeSetModal from '../digitalClock/TimeSetModal';
 import Classes from './AnalogWatch.module.css'
 import Buttons from '../reusable/Buttons';
 
+const { analog, clock, three, six, nine, twelve } = Classes;
 export default function AnalogWatch ()  {
   const [time, setTime] = useState({seconds:0, minutes:0, hours:0});
   const resetTime = () => {
@@ -44,12 +45,12 @@ export default function AnalogWatch ()  {
   },[])
   return (
       <>
-        <div className={Classes.analog}>
-          <div className={Classes.clock}>
-            <div className={Classes.three}>3</div>
-            <div className={Classes.six}>6</div>
-            <div className={Classes.nine}>9</div>
-            <div className={Classes.twelve}>12</div>
+        <div className={analog}>
+          <div className={clock}>
+            <div className={three}>3</div>
+            <div className={six}>6</div>
+            <div className={nine}>9</div>
+            <div className={twelve}>12</div>
             <Hours time={time} />
             <Minutes time={time} />
             <Seconds time={time} setTime={setTime} />
