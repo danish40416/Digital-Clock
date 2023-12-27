@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="49a401bc-8b04-4003-b19b-24eb430c8f00" name="Changes" comment="modify the css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/analogClock/Minutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/analogClock/Minutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/analogClock/Seconds.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/analogClock/Seconds.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/digitalClock/DigitalWatch.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/digitalClock/DigitalWatch.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/digitalClock/Hours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/digitalClock/Hours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/digitalClock/Minutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/digitalClock/Minutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/reusable/Buttons.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/reusable/Buttons.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/watches/Watches.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/watches/Watches.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +63,7 @@
       <workItem from="1703654374540" duration="61000" />
       <workItem from="1703654567174" duration="77000" />
       <workItem from="1703654705469" duration="3014000" />
+      <workItem from="1703677201457" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="abc">
       <option name="closed" value="true" />
@@ -169,6 +178,7 @@
     <MESSAGE value="adjust styling" />
     <MESSAGE value="modify the code" />
     <MESSAGE value="modify the css" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify the css" />
+    <MESSAGE value="Adjust reusable files in separate folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust reusable files in separate folder" />
   </component>
 </project>

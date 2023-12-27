@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hours from './Hours';
 import Minutes from './Minutes';
 import Seconds from './Seconds';
-import Modal from './TimeSetModal';
+import Modal from '../reusable/TimeSetModal';
 import classes from './DigitalWatch.module.css'
 import Buttons from '../reusable/Buttons';
 
