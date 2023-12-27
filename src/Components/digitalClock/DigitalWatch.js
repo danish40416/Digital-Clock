@@ -6,6 +6,8 @@ import Modal from './TimeSetModal';
 import classes from './DigitalWatch.module.css'
 import Buttons from '../reusable/Buttons';
 
+const { app, digitalWatch, hours, minutes, seconds, colon } = classes;
+
 export default function DigitalWatch() {
 
   ///Reset Time////
@@ -48,16 +50,16 @@ export default function DigitalWatch() {
 
   return (
     <>
-    <div className={classes.app}>
-      <div className={classes.digitalWatch}>
-        <div id={classes.hours}>
+    <div className={app}>
+      <div className={digitalWatch}>
+        <div id={hours}>
           <Hours time={time} />
         </div>
-        <div id={classes.colon}>:</div>
-        <div id={classes.minutes}>
+        <div id={colon}>:</div>
+        <div id={minutes}>
           <Minutes time={time} />
         </div>
-        <div id={classes.seconds}>
+        <div id={seconds}>
           <Seconds time={time} setTime={setTime} />
         </div>
       </div>
