@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49a401bc-8b04-4003-b19b-24eb430c8f00" name="Changes" comment="adjust clock hands">
+    <list default="true" id="49a401bc-8b04-4003-b19b-24eb430c8f00" name="Changes" comment="adjust styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/analogClock/AnalogWatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/analogClock/AnalogWatch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/analogClock/AnalogWatch.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/analogClock/AnalogWatch.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/clockHouse/ClockHouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/clockHouse/ClockHouse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/watches/Watches.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/watches/Watches.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/watches/Watches.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/watches/Watches.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/clockHouse/ClockHouse.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/clockHouse/ClockHouse.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/digitalClock/DigitalWatch.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/digitalClock/DigitalWatch.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/digitalClock/Hours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/digitalClock/Hours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/digitalClock/TimeSetModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/digitalClock/TimeSetModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +58,8 @@
       <option name="presentableId" value="Default" />
       <updated>1703399720321</updated>
       <workItem from="1703399721925" duration="1219000" />
-      <workItem from="1703486017963" duration="3482000" />
+      <workItem from="1703486017963" duration="4151000" />
+      <workItem from="1703614907874" duration="8605000" />
     </task>
     <task id="LOCAL-00001" summary="abc">
       <option name="closed" value="true" />
@@ -111,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703512372549</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adjust styling">
+      <option name="closed" value="true" />
+      <created>1703512483225</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703512483225</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +139,7 @@
     <MESSAGE value="Clock House" />
     <MESSAGE value="css module" />
     <MESSAGE value="adjust clock hands" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust clock hands" />
+    <MESSAGE value="adjust styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust styling" />
   </component>
 </project>

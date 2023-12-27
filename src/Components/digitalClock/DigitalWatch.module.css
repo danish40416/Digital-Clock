@@ -1,5 +1,3 @@
-
-
 .app {
     position: relative;
     display: flex;
@@ -8,7 +6,7 @@
     height: 30vh;
     border: 19px solid slategray;
     background-color: #EBF5FB ;
-    width: 110%;
+    width: 105%;
     margin-bottom: 10%;
   
   }
@@ -42,6 +40,7 @@
   .openModalBtn {
     background-color: #007bff;
     border: 1px solid #007bff;
+   
   }
   .updateRealTimeBtn {
     background-color: #28a745; 
@@ -52,6 +51,43 @@
     justify-content: center;
     margin: 2%;
   }
+ 
   
   
+  @media only screen and (max-width: 600px) {
+    .app {
+      background-color: lightblue;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+    }
+    .digitalWatch {
+      display: flex;
+      align-items: center;
+    }
+    #hours,
+  #minutes,
+  #colon,
+  #seconds {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  #seconds {
+    margin-top: 12%;
+    margin-left: 2%;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .resetBtn, 
+  .updateRealTimeBtn,
+  .openModalBtn {
+    width: 100%;
+  }
+ 
+    
+  }
+  
+
   

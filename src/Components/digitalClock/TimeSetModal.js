@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classes from './TimeSetModal.module.css'
 
 export default function Modal({ isOpen, onClose, onSave }) {
   const [modalTime, setModalTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
@@ -10,8 +11,8 @@ export default function Modal({ isOpen, onClose, onSave }) {
   };
 
   return (
-    <div className={`modal ${isOpen ? 'open' : ''}`}>
-      <div className="modal-content">
+    <div className={`${classes.modal} ${isOpen ? classes.open : ''}`}>
+      <div className={classes.modalContent}>
         <label htmlFor="modalHours">Hours:</label>
         <input type="number"  value={modalTime.hours}
           onChange={(e) => setModalTime({ ...modalTime, hours: parseInt(e.target.value.slice(0,2))  })} />
@@ -23,9 +24,9 @@ export default function Modal({ isOpen, onClose, onSave }) {
         <label htmlFor="modalSeconds">Seconds:</label>
         <input type="number"  value={modalTime.seconds}
           onChange={(e) => setModalTime({ ...modalTime, seconds: parseInt(e.target.value.slice(0,2))  })} />
-     <div >
-   <button  onClick={handleSave}>Save Changes</button>
-        <button className=" close" onClick={onClose}> Close Modal </button>
+     <div className={classes.modalBtn}>
+   <button className={classes.save}  onClick={handleSave}>Save Changes</button>
+        <button className={classes.close} onClick={onClose}> Close Modal </button>
         </div>
 
       </div>
